@@ -22,11 +22,13 @@ Graph of Buienradars rain forecast
         lat: 52.3667
         lineColor: 'rgba(89, 160, 238, 1)'
         fillColor: 'rgba(89, 160, 238, 0.2)'
-        update_interval: 10
+        update_interval: 300
         icon: 'mdi:weather-rainy'
         
- (update interval is in seconds)
-
+ - update interval is in seconds
+ - no point in refreshing faster than every 5 minutes, as the source only updates their data in 5-minute intervals.    
+   (https://www.buienradar.nl/overbuienradar/gratis-weerdata)    
+    
 ### An example in my own UI as a Picture Element:
 
 ![Preview Image](https://github.com/lukevink/home-assistant-buienradar-forecast-card/blob/master/buien-card-screenshot2.png)
